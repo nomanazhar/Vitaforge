@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #D7C8DD;
+  --foreground: #2D2F31;
+  --primary: #604F9E;
+  --primary-light: #BAA7FE;
+  --pink: #A7295A;
+  --purple: #883A97;
+  --muted: #5A5B5E;
+  --slate-dark: #2D2F31;
+  --slate-muted: #5A5B5E;
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-bg-light: rgba(255, 255, 255, 0.8);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-pink: var(--pink);
+  --color-purple: var(--purple);
+  --color-muted: var(--muted);
+  --color-slate-dark: var(--slate-dark);
+  --color-slate-muted: var(--slate-muted);
+  
+  --font-inter: "Inter", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
 }
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/40 border border-white/20 backdrop-blur-xl shadow-[0_8px_32px_rgba(96,79,158,0.05)];
+  }
+
+  .glass-card {
+    @apply bg-white/60 border border-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.1)];
+  }
+
+  .glass-card-light {
+    @apply bg-white/80 border border-white/40 backdrop-blur-md;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-br from-[#7C3AED] to-[#E879F9] text-transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-br from-[#604F9E] to-[#BAA7FE] text-transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .bg-gradient-button {
+    @apply bg-gradient-to-br from-[#604F9E] to-[#BAA7FE];
+  }
+
+  .bg-gradient-ready {
+    @apply bg-gradient-to-br from-[#7C3AED] to-[#C026D3];
+  }
+
+  .container-custom {
+    @apply max-w-[1280px] mx-auto px-6;
+  }
+}
+
