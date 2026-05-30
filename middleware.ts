@@ -8,17 +8,24 @@ import { createServerClient } from "@supabase/ssr";
 
 /** Routes that require authentication */
 const PROTECTED_ROUTES = [
-  "/dashboard",
-  "/profile",
-  "/workout",
-  "/diet",
-  "/tasks",
   "/camera",
-  "/results",
 ];
 
+// const PROTECTED_ROUTES = [
+//   "/dashboard",
+//   "/profile",
+//   "/workout",
+//   "/diet",
+//   "/tasks",
+//   "/camera",
+//   "/results",
+// ];
+
 /** Routes only accessible when NOT authenticated (redirect to /dashboard) */
-const AUTH_ROUTES = ["/login", "/signup"];
+const AUTH_ROUTES = ["/login", "/signup", "/dashboard", "/profile",
+  "/workout",
+  "/diet",
+  "/tasks", "/results"];
 
 export async function middleware(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });

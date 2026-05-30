@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   images: {
     remotePatterns: [
       {
-        // Supabase Storage — replace <project-ref> with your actual project reference
-        protocol: "https",
-        hostname: "*.supabase.co",
-        pathname: "/storage/v1/object/public/**",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },

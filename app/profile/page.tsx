@@ -176,7 +176,7 @@ export default function ProfilePage() {
                 </div>
               </div>
               <div className="relative h-40 rounded-2xl overflow-hidden bg-slate-100">
-                <Image src="/images/landing/gym_progress.png" alt="Workout" fill className="object-cover" />
+                <Image src="/images/landing/gym_progress.png" alt="Workout" fill sizes="(max-width: 768px) 100vw, 384px" className="object-cover" />
                 <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black text-primary uppercase tracking-widest">
                   Workout
                 </div>

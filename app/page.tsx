@@ -70,6 +70,7 @@ export default function LandingPage() {
                 src="/images/landing/hero_runner.png"
                 alt="Athlete training"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
                 priority
               />
@@ -195,6 +196,7 @@ export default function LandingPage() {
                 src="/images/landing/gym_progress.png"
                 alt="Gym tracking"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               {/* Overlay Stat */}
@@ -244,6 +246,7 @@ export default function LandingPage() {
                   src="/images/landing/ai_coach_avatar.png"
                   alt="AI Coach"
                   fill
+                  sizes="128px"
                   className="object-cover"
                 />
               </div>

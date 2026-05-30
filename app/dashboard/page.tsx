@@ -99,6 +99,7 @@ export default function DashboardPage() {
                   src="/images/landing/gym_progress.png"
                   alt="Workout Focus"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
